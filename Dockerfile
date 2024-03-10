@@ -23,6 +23,7 @@ RUN apt-get install -y ffmpeg
 # pipのアップグレード、requirements.txtから必要なライブラリをインストール
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
+RUN pip install -r requirements.txt
 # discord.pyをpy-cordにアップグレード
 RUN pip install git+https://github.com/Pycord-Development/pycord
 
