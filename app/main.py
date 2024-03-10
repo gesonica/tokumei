@@ -1,13 +1,11 @@
 import discord
 from discord.ext import commands
 import os
-from flask import Flask
 import sqlite3
 import re
 import requests
 import time
 from core.start import DBot
-# from keep_alive import keep_alive
 
 # Secretsから環境変数を読み込む
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")
@@ -125,10 +123,6 @@ def getYurucafeMember(user: discord.User) -> discord.Member:
 # 指定文字列の中に、URLが含まれるかを判定します。
 def contains_url(content: str) -> bool:
     return bool(_contains_url_matcher.search(content))
-
-
-# Discordボットを起動した後、keep_alive関数を呼び出してウェブサーバーを起動
-# keep_alive()
 
 # Bot立ち上げ
 DBot(
