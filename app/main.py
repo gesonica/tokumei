@@ -6,6 +6,7 @@ import sqlite3
 import re
 import requests
 import time
+from core.start import DBot
 # from keep_alive import keep_alive
 
 # Secretsから環境変数を読み込む
@@ -129,5 +130,8 @@ def contains_url(content: str) -> bool:
 # Discordボットを起動した後、keep_alive関数を呼び出してウェブサーバーを起動
 # keep_alive()
 
-# Botを実行
-client.run(TOKEN)
+# Bot立ち上げ
+DBot(
+    token=Token,
+    intents=discord.Intents.all()
+).run()
