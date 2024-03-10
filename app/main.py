@@ -3,7 +3,6 @@ from discord.ext import commands
 import os
 import sqlite3
 import re
-import requests
 import time
 from core.start import DBot
 
