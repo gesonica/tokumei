@@ -125,6 +125,6 @@ def contains_url(content: str) -> bool:
 
 # Bot立ち上げ
 DBot(
-    token=Token,
+    token=TOKEN,
     intents=discord.Intents.all()
 ).run()
