@@ -13,7 +13,7 @@ import uvicorn
 from dotenv import load_dotenv
 load_dotenv()
 
-from api.apiv1.index import Index
+from app.api.apiv1.index import Index
 
 try:
     from core.start import DBot
