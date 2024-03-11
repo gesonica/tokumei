@@ -1,4 +1,4 @@
-from fastapi import APIRouter,Request
+from fastapi import APIRouter, Request
 from starlette.requests import Request
 
 import os
@@ -16,4 +16,4 @@ class Index(commands.Cog):
 
         @self.router.get("/")
         async def index(request: Request):
-	    return {'message':f'bot id:{self.bot.application_id}'}
+            return {'message': f'bot id:{self.bot.application_id}'}
