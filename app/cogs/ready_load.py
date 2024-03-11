@@ -40,7 +40,7 @@ class ReadyLoad(commands.Cog):
             openapi_url=None
         )
         
-	self.app.include_router(router=Index(bot=self.bot).router)
+self.app.include_router(router=Index(bot=self.bot).router)
 
         if os.environ.get("PORTS") != None:
             hostname = "localhost"
